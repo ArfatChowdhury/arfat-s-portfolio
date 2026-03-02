@@ -237,11 +237,12 @@ export function Work() {
             <LivingCard
               variant={2}
               image={
-                <PlaceholderImage
+                <img
+                  src="/expenseTracker.png"
+                  alt="Expense Tracker App Mockup"
                   width={640}
                   height={480}
-                  label={p3.title}
-                  className="w-full border-0"
+                  className="w-full rounded-2xl object-cover shadow-2xl"
                 />
               }
             />

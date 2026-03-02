@@ -99,12 +99,22 @@ function ProjectCard({
             className={isOdd ? "md:order-1" : ""}
           >
             <Safari url={project.url} className="shadow-lg shadow-black/10">
-              <PlaceholderImage
-                width={560}
-                height={340}
-                label={project.title}
-                className="rounded-none border-0"
-              />
+              {project.title === "Expense Tracker App" ? (
+                <img
+                  src="/expenseTracker.png"
+                  alt={project.title}
+                  width={560}
+                  height={340}
+                  className="rounded-none object-cover"
+                />
+              ) : (
+                <PlaceholderImage
+                  width={560}
+                  height={340}
+                  label={project.title}
+                  className="rounded-none border-0"
+                />
+              )}
             </Safari>
           </motion.div>
         </div>
