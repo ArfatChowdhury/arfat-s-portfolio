@@ -13,7 +13,7 @@ const socials = [
 
 export function Contact() {
   return (
-    <section className="relative w-full px-6 py-40">
+    <section id="contact" className="relative w-full px-6 py-40">
       <div className="mx-auto flex max-w-[960px] flex-col items-center text-center">
         {/* Scattered Assembly Avatar — fragments fly together on scroll */}
         <AvatarMosaic className="mb-16" />

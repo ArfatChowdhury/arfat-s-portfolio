@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Folio — Personal Portfolio",
+  title: "Naim Uddin Arafat — Portfolio",
   description:
-    "A refined personal portfolio with smooth scroll animations, interactive project showcases, and a clean dark aesthetic.",
+    "Full-Stack JavaScript & React Native Developer Portfolio.",
 };
 
 export default function RootLayout({

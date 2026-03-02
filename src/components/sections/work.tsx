@@ -111,7 +111,7 @@ export function Work() {
   const p3 = projects[2];
 
   return (
-    <section className="relative w-full">
+    <section id="work" className="relative w-full">
       {/* ═══ Project 1: Full immersion — living card image + text below ═══ */}
       <div className="py-32 px-6">
         <div className="mx-auto max-w-[1120px]">

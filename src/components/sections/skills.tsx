@@ -91,7 +91,7 @@ export function Skills() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full py-32 px-6">
+    <section id="skills" className="relative w-full py-32 px-6">
       <div className="mx-auto max-w-[960px]">
         <BlurFade delay={0} inView>
           <p className="mb-12 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">

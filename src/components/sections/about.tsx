@@ -11,7 +11,7 @@ const details = [
 
 export function About() {
   return (
-    <section className="relative w-full py-32 px-6">
+    <section id="about" className="relative w-full py-32 px-6">
       <div className="mx-auto max-w-[640px]">
         <BlurFade delay={0} inView>
           <p className="text-[clamp(1.125rem,2.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">

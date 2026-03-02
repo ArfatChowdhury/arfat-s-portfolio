@@ -22,7 +22,7 @@ const ease = [0.2, 0.8, 0.2, 1] as const;
 
 export function Opening() {
   return (
-    <section className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden px-6">
+    <section id="opening" className="relative flex min-h-[100dvh] w-full items-center justify-center overflow-hidden px-6">
       {/* Living noise shader */}
       <Suspense fallback={null}>
         <HeroScene />
