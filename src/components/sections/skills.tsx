@@ -1,0 +1,125 @@
+"use client";
+
+import { useState, useCallback, useRef } from "react";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { cn } from "@/lib/utils";
+
+const skills = [
+  { name: "React Native", note: "8 months specializing in Expo and NativeWind. Cross-platform mobile expert." },
+  { name: "MERN Stack", note: "Built 10+ projects using MongoDB, Express, React, and Node.js." },
+  { name: "Next.js", note: "Professional web platforms with App Router and SSR." },
+  { name: "TypeScript", note: "Type-safe development across web and mobile apps." },
+  { name: "Redux Toolkit", note: "Complex state management for e-commerce and finance apps." },
+  { name: "Tailwind CSS", note: "Modern, responsive UI design using Tailwind and DaisyUI." },
+  { name: "Firebase", note: "Authentication and real-time database integration." },
+  { name: "REST APIs", note: "Designing and consuming scalable backend services." },
+];
+
+function SkillOrb({
+  skill,
+  index,
+  hovered,
+  onHover,
+  onLeave,
+}: {
+  skill: (typeof skills)[0];
+  index: number;
+  hovered: number | null;
+  onHover: (i: number) => void;
+  onLeave: () => void;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      setPos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    },
+    [],
+  );
+
+  const isDimmed = hovered !== null && hovered !== index;
+  const isActive = hovered === index;
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => onHover(index)}
+      onMouseLeave={onLeave}
+      className={cn(
+        `living-card living-card-${index % 3} relative overflow-hidden bg-[var(--gray-2)] transition-all duration-300`,
+        isDimmed && "opacity-30 scale-[0.97]",
+        isActive && "scale-[1.02]",
+      )}
+    >
+      {/* Spotlight glow following cursor */}
+      <div
+        className="pointer-events-none absolute -inset-px transition-opacity duration-500"
+        style={{
+          opacity: isActive ? 1 : 0,
+          background: `radial-gradient(280px circle at ${pos.x}px ${pos.y}px, var(--spotlight-fill), transparent 65%)`,
+          borderRadius: "inherit",
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col gap-2 p-5">
+        <p className="text-[15px] font-medium text-[var(--gray-12)]">
+          {skill.name}
+        </p>
+        <p
+          className={cn(
+            "text-[12px] leading-[1.5] text-[var(--gray-7)] transition-all duration-[var(--duration-normal)]",
+            isActive
+              ? "max-h-20 opacity-100"
+              : "max-h-0 overflow-hidden opacity-0",
+          )}
+        >
+          {skill.note}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function Skills() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
+  return (
+    <section className="relative w-full py-32 px-6">
+      <div className="mx-auto max-w-[960px]">
+        <BlurFade delay={0} inView>
+          <p className="mb-12 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
+            Stack
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={0.05} inView>
+          <p className="mb-12 max-w-[440px] text-[clamp(1.125rem,2.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
+            I reach for whatever the project needs. These are the tools
+            I&apos;m most productive with.
+          </p>
+        </BlurFade>
+
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {skills.map((skill, i) => (
+            <BlurFade key={skill.name} delay={0.05 + i * 0.04} inView>
+              <SkillOrb
+                skill={skill}
+                index={i}
+                hovered={hovered}
+                onHover={setHovered}
+                onLeave={() => setHovered(null)}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

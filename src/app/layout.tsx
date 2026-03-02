@@ -1,61 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import { CursorGlow } from "@/components/ui/cursor-glow";
 import "./globals.css";
 
-const inter = Inter({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Naim Uddin Arafat — React Native & Full-Stack Developer",
+  title: "Folio — Personal Portfolio",
   description:
-    "Self-taught Full-Stack JavaScript developer specializing in React Native and Next.js. Building production-grade cross-platform products. Available for remote work.",
-  keywords: [
-    "React Native developer",
-    "Full-Stack developer",
-    "Next.js developer",
-    "MERN stack developer",
-    "remote developer",
-    "freelance developer Bangladesh",
-    "TypeScript developer",
-    "mobile app developer",
-  ],
-  authors: [{ name: "Naim Uddin Arafat" }],
-  creator: "Naim Uddin Arafat",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://naim-arafat.vercel.app",
-    title: "Naim Uddin Arafat — React Native & Full-Stack Developer",
-    description:
-      "Self-taught Full-Stack JS & React Native developer building production-ready products.",
-    siteName: "Naim Uddin Arafat Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Naim Uddin Arafat — Developer Portfolio",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Naim Uddin Arafat — React Native & Full-Stack Developer",
-    description:
-      "Self-taught Full-Stack JS & React Native developer building production-ready products.",
-    images: ["/og-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+    "A refined personal portfolio with smooth scroll animations, interactive project showcases, and a clean dark aesthetic.",
 };
 
 export default function RootLayout({
@@ -64,27 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        {/* Blocking script: prevents flash of wrong theme */}
         <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Naim Uddin Arafat",
-              jobTitle: "Full-Stack JavaScript & React Native Developer",
-              url: "https://naim-arafat.vercel.app",
-              email: "arfatahsan60@gmail.com",
-              sameAs: [
-                "https://github.com/ArfatChowdhury",
-                "https://www.linkedin.com/in/naim-uddin-arafat",
-              ],
-            }),
+            __html: `try{const t=localStorage.getItem("theme");if(t==="light")document.documentElement.classList.remove("dark")}catch(e){}`,
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
+      >
+        <CursorGlow />
+        {children}
+      </body>
     </html>
   );
 }

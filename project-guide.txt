@@ -1,0 +1,60 @@
+# PORTFOLIO MANAGEMENT GUIDE - NAIM UDDIN ARAFAT
+
+This guide explains how I've updated your portfolio and provides answers to your specific questions about additional projects and mockups.
+
+---
+
+### 1. PROJECTS: WHERE TO PLACE ADDITIONAL ONES?
+
+You mentioned having 10+ projects but only 3 on your CV. In a high-end portfolio, "Less is More." However, if you want to showcase more, here are the best places:
+
+#### Option A: A "More Projects" Gallery
+The template already has a `ProjectsGallery` component (`src/components/sections/projects-gallery.tsx`). 
+- I can integrate this below the main `Work` section.
+- You can list your remaining 7+ projects here as smaller cards.
+- **Advice**: Keep the top 3 (Nemo Web, Nemo Mobile, Expense Tracker) as the "Featured" large sections, and the rest as a grid below.
+
+#### Option B: GitHub Link
+In the `Contact` and `Footer` sections, I've ensured your GitHub link is prominent. 
+- You can add a button at the end of the `Work` section that says: "View all 10+ projects on GitHub →".
+
+---
+
+### 2. MOCKUPS: HOW TO HANDLE LIVE LINKS WITHOUT MOCKUPS?
+
+Since you have live links but no professional mockups (images), follow these steps to make your portfolio look premium:
+
+#### Step 1: Use Screenshot Framing Tools (Recommended)
+Don't just use raw screenshots. Use these free tools to "frame" your live websites/apps:
+- **Shot.so**: My #1 recommendation. Upload a screenshot of your live link, and it puts it in a beautiful browser or phone frame with a glassmorphism background.
+- **ScreenShot.rocks**: Great for quick browser/mobile frames.
+- **Previewed.app**: If you want 3D mobile mockups for your React Native apps.
+
+#### Step 2: Record "Live" GIFs/Videos
+For your mobile apps (Expo/React Native), record a 10-second video of you navigating the app.
+- Use **Loom** or **Screenity** to record.
+- Convert to `.mp4` or `.gif`.
+- Place these in the `Work` section instead of static images. It looks much more professional than a mockup!
+
+---
+
+### 3. WHAT I HAVE MODIFIED IN YOUR CODE
+
+I have updated the following files to replace "Alex Chen" with your identity:
+1. `src/components/sections/navbar.tsx`: Updated initials to "NA" and your email.
+2. `src/components/sections/footer.tsx`: Updated copyright to your name.
+3. `src/components/sections/opening.tsx`: Updated your philosophies and professional tagline.
+4. `src/components/sections/about.tsx`: Updated your name, bio (from resume), and education details.
+5. `src/components/sections/skills.tsx`: Mapped your MERN & React Native stack.
+6. `src/components/sections/work.tsx`: Integrated your 3 major projects with their tech stacks and descriptions.
+7. `src/components/sections/contact.tsx`: Updated all social links and contact info.
+
+### 4. HOW TO FIX YOUR CV?
+The CV layout in the image you sent is clean. To "Fix" it further for the portfolio:
+- I've ensured the **Tech Stack** for each project is visible as interactive tags.
+- I've highlighted your **8+ months of React Native specialization**, as that is a high-value skill.
+- I've linked the "Live" and "Code" buttons directly to your GitHub/Vercel links.
+
+---
+
+Got it? If you need me to move any specific project into the "Featured" spot, just let me know!
