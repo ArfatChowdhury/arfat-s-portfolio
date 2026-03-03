@@ -30,23 +30,28 @@
   --animate-marquee: marquee var(--duration, 40s) linear infinite;
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-100% - var(--marquee-gap))); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
   }
 }
 
 /* ─── Light mode (default) — 12-level gray scale ─── */
 :root {
   --radius: 0.625rem;
-  --gray-1:  oklch(0.985 0 0);
-  --gray-2:  oklch(0.960 0 0);
-  --gray-3:  oklch(0.930 0 0);
-  --gray-4:  oklch(0.895 0 0);
-  --gray-5:  oklch(0.845 0 0);
-  --gray-6:  oklch(0.770 0 0);
-  --gray-7:  oklch(0.690 0 0);
-  --gray-8:  oklch(0.590 0 0);
-  --gray-9:  oklch(0.490 0 0);
+  --gray-1: oklch(0.985 0 0);
+  --gray-2: oklch(0.960 0 0);
+  --gray-3: oklch(0.930 0 0);
+  --gray-4: oklch(0.895 0 0);
+  --gray-5: oklch(0.845 0 0);
+  --gray-6: oklch(0.770 0 0);
+  --gray-7: oklch(0.690 0 0);
+  --gray-8: oklch(0.590 0 0);
+  --gray-9: oklch(0.490 0 0);
   --gray-10: oklch(0.395 0 0);
   --gray-11: oklch(0.270 0 0);
   --gray-12: oklch(0.130 0 0);
@@ -79,19 +84,20 @@
   --spotlight-fill: oklch(0 0 0 / 5%);
   --spotlight-border: oklch(0 0 0 / 10%);
   --cursor-glow-color: oklch(0 0 0 / 3%);
+  --ruler-tick-base: rgba(0, 0, 0, 0.15);
 }
 
 /* ─── Dark mode — inverted 12-level gray scale ─── */
 .dark {
-  --gray-1:  oklch(0.110 0 0);
-  --gray-2:  oklch(0.130 0 0);
-  --gray-3:  oklch(0.160 0 0);
-  --gray-4:  oklch(0.190 0 0);
-  --gray-5:  oklch(0.230 0 0);
-  --gray-6:  oklch(0.320 0 0);
-  --gray-7:  oklch(0.400 0 0);
-  --gray-8:  oklch(0.490 0 0);
-  --gray-9:  oklch(0.580 0 0);
+  --gray-1: oklch(0.110 0 0);
+  --gray-2: oklch(0.130 0 0);
+  --gray-3: oklch(0.160 0 0);
+  --gray-4: oklch(0.190 0 0);
+  --gray-5: oklch(0.230 0 0);
+  --gray-6: oklch(0.320 0 0);
+  --gray-7: oklch(0.400 0 0);
+  --gray-8: oklch(0.490 0 0);
+  --gray-9: oklch(0.580 0 0);
   --gray-10: oklch(0.670 0 0);
   --gray-11: oklch(0.780 0 0);
   --gray-12: oklch(0.930 0 0);
@@ -100,6 +106,7 @@
   --spotlight-fill: oklch(1 0 0 / 4%);
   --spotlight-border: oklch(1 0 0 / 10%);
   --cursor-glow-color: oklch(1 0 0 / 4%);
+  --ruler-tick-base: rgba(255, 255, 255, 0.1);
 }
 
 /* ─── View Transitions for theme toggle ─── */
@@ -108,9 +115,11 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
 ::view-transition-new(root) {
   z-index: 1;
 }
+
 ::view-transition-old(root) {
   z-index: -1;
 }
@@ -128,35 +137,72 @@
   backface-visibility: hidden;
 }
 
-.living-card-0 { animation: breathe-0 14s ease-in-out infinite; }
-.living-card-1 { animation: breathe-1 14s ease-in-out infinite; animation-delay: -4.7s; }
-.living-card-2 { animation: breathe-2 14s ease-in-out infinite; animation-delay: -9.3s; }
+.living-card-0 {
+  animation: breathe-0 14s ease-in-out infinite;
+}
+
+.living-card-1 {
+  animation: breathe-1 14s ease-in-out infinite;
+  animation-delay: -4.7s;
+}
+
+.living-card-2 {
+  animation: breathe-2 14s ease-in-out infinite;
+  animation-delay: -9.3s;
+}
 
 /* Three distinct organic shape cycles — each card has a unique personality */
 @keyframes breathe-0 {
-  0%, 100% { border-radius: 18% 28% 24% 20% / 22% 18% 28% 22%; }
-  50%      { border-radius: 24% 20% 18% 28% / 20% 24% 20% 28%; }
+
+  0%,
+  100% {
+    border-radius: 18% 28% 24% 20% / 22% 18% 28% 22%;
+  }
+
+  50% {
+    border-radius: 24% 20% 18% 28% / 20% 24% 20% 28%;
+  }
 }
+
 @keyframes breathe-1 {
-  0%, 100% { border-radius: 24% 20% 28% 18% / 28% 22% 18% 24%; }
-  50%      { border-radius: 20% 28% 22% 24% / 18% 28% 24% 18%; }
+
+  0%,
+  100% {
+    border-radius: 24% 20% 28% 18% / 28% 22% 18% 24%;
+  }
+
+  50% {
+    border-radius: 20% 28% 22% 24% / 18% 28% 24% 18%;
+  }
 }
+
 @keyframes breathe-2 {
-  0%, 100% { border-radius: 28% 18% 20% 24% / 24% 28% 22% 18%; }
-  50%      { border-radius: 18% 24% 28% 20% / 28% 18% 24% 22%; }
+
+  0%,
+  100% {
+    border-radius: 28% 18% 20% 24% / 24% 28% 22% 18%;
+  }
+
+  50% {
+    border-radius: 18% 24% 28% 20% / 28% 18% 24% 22%;
+  }
 }
 
 .glow-border-spin {
   animation: spin-border 4s linear infinite;
 }
+
 @keyframes spin-border {
-  to { --border-angle: 360deg; }
+  to {
+    --border-angle: 360deg;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
@@ -164,6 +210,7 @@
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
   }
+
   ::selection {
     background: var(--gray-5);
   }

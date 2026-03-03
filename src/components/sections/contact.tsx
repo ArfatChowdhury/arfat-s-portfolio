@@ -79,15 +79,6 @@ export function Contact() {
         {/* Copyright */}
         <div className="mt-20 flex items-center gap-3 text-[11px] text-[var(--gray-5)]">
           <p>&copy; {new Date().getFullYear()} Naim Uddin Arafat</p>
-          <span className="text-[var(--gray-4)]">/</span>
-          <a
-            href="https://www.opale-ui.design/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-200 hover:text-[var(--gray-8)]"
-          >
-            Designed by Opale UI
-          </a>
         </div>
       </div>
     </section>

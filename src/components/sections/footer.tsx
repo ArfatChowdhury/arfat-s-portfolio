@@ -5,14 +5,6 @@ export function Footer() {
         <p className="text-[12px] text-[var(--gray-6)]">
           &copy; {new Date().getFullYear()} Naim Uddin Arafat
         </p>
-        <a
-          href="https://www.opale-ui.design/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[12px] text-[var(--gray-6)] transition-colors duration-200 hover:text-[var(--gray-9)]"
-        >
-          Designed by Opale UI
-        </a>
       </div>
     </footer>
   );

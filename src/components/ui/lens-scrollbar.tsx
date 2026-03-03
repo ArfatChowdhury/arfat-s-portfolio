@@ -99,11 +99,11 @@ export function LensScrollbar() {
                                         isTenth ? "w-4 bg-[var(--gray-7)]" : isNth ? "w-2.5 bg-[var(--gray-5)]" : "w-1.5 bg-[var(--gray-3)]"
                                     )}
                                     style={{
-                                        backgroundColor: useTransform(scaleY, [(i - 2) / TICK_COUNT, i / TICK_COUNT, (i + 2) / TICK_COUNT], ["rgba(255,255,255,0.1)", "rgba(249,115,22,0.8)", "rgba(255,255,255,0.1)"])
+                                        backgroundColor: useTransform(scaleY, [(i - 2) / TICK_COUNT, i / TICK_COUNT, (i + 2) / TICK_COUNT], ["var(--ruler-tick-base)", "rgba(249,115,22,0.8)", "var(--ruler-tick-base)"])
                                     }}
                                 />
                                 {isTenth && (
-                                    <span className="font-mono text-[7px] text-[var(--gray-5)]">
+                                    <span className="font-mono text-[7px] text-[var(--gray-9)]">
                                         {String(i).padStart(2, "0")}
                                     </span>
                                 )}
