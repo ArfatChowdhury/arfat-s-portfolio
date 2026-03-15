@@ -3,10 +3,10 @@
 import { BlurFade } from "@/components/ui/blur-fade";
 
 const details = [
-  { label: "Focus", value: "MERN Stack, React Native" },
-  { label: "Education", value: "HSC, Fateyabad College" },
+  { label: "Focus", value: "React Native · MERN Stack" },
   { label: "Based in", value: "Chittagong, Bangladesh" },
-  { label: "Status", value: "Actively Seeking Roles" },
+  { label: "Status", value: "Open to Remote Opportunities" },
+  { label: "GitHub", value: "github.com/ArfatChowdhury" },
 ];
 
 export function About() {
@@ -15,15 +15,17 @@ export function About() {
       <div className="mx-auto max-w-[640px]">
         <BlurFade delay={0} inView>
           <p className="text-[clamp(1.125rem,2.5vw,1.375rem)] font-normal leading-[1.6] tracking-[-0.01em] text-[var(--gray-11)]">
-            I&apos;m Naim Uddin Arafat. I&apos;m a self-taught Full-Stack JavaScript Developer with 10+ completed projects spanning MERN stack and React Native development.
+            I&apos;m Naim Uddin Arafat — a self-taught full-stack developer from
+            Chittagong, Bangladesh. I started designing interfaces on Fiverr in
+            2019, and I never stopped building. Today I specialise in React Native
+            and MERN Stack, with real production apps shipping to the Play Store
+            and a social media app in development for a startup.
           </p>
         </BlurFade>
 
         <BlurFade delay={0.1} inView>
           <p className="mt-8 text-[15px] leading-[1.7] text-[var(--gray-8)]">
-            Specializing in React Native for the past 8 months, I build
-            production-ready e-commerce platforms and mobile applications.
-            My work sits at the intersection of performance and clean code.
+            I don&apos;t wait to feel ready. I ship, learn, and ship again.
           </p>
         </BlurFade>
 

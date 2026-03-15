@@ -29,6 +29,19 @@ export function Opening() {
       </Suspense>
 
       <div className="relative z-10 flex flex-col items-center text-center">
+        {/* Status */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 2.5, ease }}
+          className="mb-6"
+        >
+          <span className="inline-flex items-center gap-2 text-[13px] text-[var(--gray-8)]">
+            <span className="inline-block h-[6px] w-[6px] rounded-full bg-emerald-500/80" />
+            Open to Remote Opportunities
+          </span>
+        </motion.div>
+
         {/* Main statement — gravitational text */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,9 +51,9 @@ export function Opening() {
           <GravitationalText
             intensity={18}
             radius={220}
-            className="text-[clamp(3rem,11vw,9rem)] font-bold leading-[0.88] tracking-[-0.05em] text-[var(--gray-12)]"
+            className="text-[clamp(2.5rem,9vw,7rem)] font-bold leading-[0.9] tracking-[-0.05em] text-[var(--gray-12)]"
           >
-            The invisible
+            I turn ideas into
           </GravitationalText>
         </motion.div>
 
@@ -52,17 +65,28 @@ export function Opening() {
           <GravitationalText
             intensity={18}
             radius={220}
-            className="text-[clamp(3rem,11vw,9rem)] font-bold leading-[0.88] tracking-[-0.05em] text-[var(--gray-12)]"
+            className="text-[clamp(2.5rem,9vw,7rem)] font-bold leading-[0.9] tracking-[-0.05em] text-[var(--gray-12)]"
           >
-            Naim Uddin Arafat
+            shipped products.
           </GravitationalText>
         </motion.div>
+
+        {/* Subheading */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 3.4, ease }}
+          className="mt-6 max-w-[420px] text-[14px] leading-[1.65] text-[var(--gray-7)]"
+        >
+          Full-Stack JavaScript &amp; React Native Developer —{" "}
+          building web apps, mobile apps and shipping to the Play Store.
+        </motion.p>
 
         {/* Morphing philosophy — cycles through beliefs */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 3.6, ease }}
+          transition={{ duration: 1, delay: 3.8, ease }}
           className="mt-8"
         >
           <MorphingText
@@ -71,14 +95,14 @@ export function Opening() {
           />
         </motion.div>
 
-        {/* Bridge text */}
+        {/* Name */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 4.2, ease }}
           className="mt-8 max-w-[320px] text-[14px] leading-[1.6] text-[var(--gray-6)]"
         >
-          I&apos;m a Full-Stack JavaScript & React Native Developer.
+          Naim Uddin Arafat
           <br />
           This is my journey.
         </motion.p>

@@ -5,14 +5,17 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  { name: "React Native", note: "8 months specializing in Expo and NativeWind. Cross-platform mobile expert." },
-  { name: "MERN Stack", note: "Built 10+ projects using MongoDB, Express, React, and Node.js." },
-  { name: "Next.js", note: "Professional web platforms with App Router and SSR." },
-  { name: "TypeScript", note: "Type-safe development across web and mobile apps." },
+  { name: "React Native", note: "Cross-platform mobile expert. Expo, NativeWind, Reanimated — shipping to Play Store." },
+  { name: "MERN Stack", note: "Full-stack ownership. MongoDB to React UI, built and deployed solo." },
+  { name: "Next.js", note: "Production web platforms with App Router, SSR and Vercel." },
+  { name: "TypeScript", note: "Type-safe development across all web and mobile projects." },
   { name: "Redux Toolkit", note: "Complex state management for e-commerce and finance apps." },
-  { name: "Tailwind CSS", note: "Modern, responsive UI design using Tailwind and DaisyUI." },
-  { name: "Firebase", note: "Authentication and real-time database integration." },
+  { name: "Tailwind CSS", note: "Rapid, responsive UI with Tailwind CSS 4 and DaisyUI." },
+  { name: "Firebase", note: "Auth, Firestore and real-time database integration." },
   { name: "REST APIs", note: "Designing and consuming scalable backend services." },
+  { name: "Groq AI SDK", note: "AI-powered receipt scanning with Llama 4 Vision." },
+  { name: "Node.js / Express", note: "Custom REST API backends from scratch." },
+  { name: "MongoDB", note: "Database design and management for full-stack apps." },
 ];
 
 function SkillOrb({

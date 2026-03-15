@@ -6,32 +6,25 @@ import { BlurFade } from "@/components/ui/blur-fade";
 
 const careers = [
   {
+    period: "2019",
+    role: "Freelance UI/UX Designer",
+    company: "Fiverr",
+    description:
+      "Delivered mobile app UI, website UI and wireframe/prototype designs for international clients.",
+  },
+  {
     period: "2025 — Present",
-    role: "Full-Stack Developer",
-    company: "Personal Projects & Freelance",
+    role: "React Native Developer",
+    company: "Confidential Tech Startup (NDA)",
     description:
-      "Built 10+ production-ready platforms including e-commerce and mobile apps using the MERN stack and React Native.",
+      "Building React Native screens, components and API integrations for a social media application.",
   },
   {
-    period: "2025",
-    role: "React Native Specialist",
-    company: "Mobile Development",
+    period: "2025 — Present",
+    role: "Independent Developer",
+    company: "Personal Projects",
     description:
-      "Deep-dived into the React Native ecosystem, mastering Expo, NativeWind, and complex state management with Redux Toolkit.",
-  },
-  {
-    period: "2017",
-    role: "HSC Graduate",
-    company: "Fateyabad City College",
-    description:
-      "Completed Higher Secondary Certificate with a focus on science and technology fundamentals.",
-  },
-  {
-    period: "2015",
-    role: "SSC Graduate",
-    company: "Hathazari Parbati High School",
-    description:
-      "Completed Secondary School Certificate, laying the foundation for a career in engineering.",
+      "Building and publishing mobile apps to the Google Play Store. 12+ projects shipped across MERN stack and React Native.",
   },
 ];
 
