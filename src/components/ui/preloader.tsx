@@ -11,7 +11,7 @@ const stairEase = [0.455, 0.03, 0.515, 0.955] as const;
  * like a film opening from black. Works in both light and dark mode.
  */
 function PreloaderOverlay() {
-  const text = "Notice everything.";
+  const text = "Hi, I'm Arafat.";
   const words = text.split(" ");
 
   return (

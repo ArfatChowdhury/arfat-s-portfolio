@@ -295,9 +295,9 @@ function ProjectCard({
     <BlurFade delay={0.05 + index * 0.06} inView>
       <button
         onClick={onClick}
-        className={`living-card living-card-${index % 3} group w-full cursor-pointer bg-[var(--gray-2)] text-left transition-all duration-300 hover:scale-[1.015]`}
+        className={`living-card living-card-${index % 3} group w-full h-full cursor-pointer bg-[var(--gray-2)] text-left transition-all duration-300 hover:scale-[1.015]`}
       >
-        <div className="flex flex-col gap-3 p-6">
+        <div className="flex h-full flex-col gap-3 p-6">
           {/* Tag row */}
           <div className="flex items-center justify-between gap-2 flex-wrap">
             <div className="flex items-center gap-2">
@@ -399,7 +399,7 @@ export function Work() {
             </p>
           </BlurFade>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 items-stretch">
             {projects.map((project, i) => (
               <ProjectCard
                 key={project.id}

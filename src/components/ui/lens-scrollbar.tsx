@@ -5,8 +5,7 @@ import { motion, useScroll, useSpring, useTransform, useMotionValue } from "fram
 import { cn } from "@/lib/utils";
 
 const SECTIONS = [
-    { id: "opening", label: "Hero", long: true },
-    { id: "about", label: "About", long: false },
+    { id: "opening", label: "Intro", long: true },
     { id: "work", label: "Work", long: true },
     { id: "skills", label: "Stack", long: false },
     { id: "contact", label: "Contact", long: true },
@@ -64,7 +63,7 @@ export function LensScrollbar() {
             {/* LEFT — TECHNICAL RULER SCALE */}
             <div
                 ref={rulerRef}
-                className="fixed left-6 top-1/2 z-50 flex h-[70vh] -translate-y-1/2 flex-col items-start px-2"
+        className="fixed left-6 top-1/2 z-50 hidden md:flex h-[70vh] -translate-y-1/2 flex-col items-start px-2"
                 style={{ perspective: "1000px" }}
             >
                 {/* Main Track Line */}
@@ -147,7 +146,7 @@ export function LensScrollbar() {
                 initial={{ x: 220 }}
                 animate={{ x: pct > 5 ? 0 : 220 }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                className="fixed right-0 top-1/2 z-50 -translate-y-1/2 flex flex-col items-center"
+                className="fixed right-0 top-1/2 z-50 -translate-y-1/2 hidden md:flex flex-col items-center"
             >
                 <button
                     onClick={() => scrollTo("contact")}

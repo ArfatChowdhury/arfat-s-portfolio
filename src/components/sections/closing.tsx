@@ -8,28 +8,28 @@ export function Closing() {
   return (
     <section className="relative w-full px-6 py-40">
       <div className="mx-auto flex max-w-[960px] flex-col items-center text-center">
-        {/* Name reveal — the payoff */}
+        {/* Name reveal */}
         <BlurFade delay={0} inView>
           <GravitationalText
             intensity={12}
             radius={160}
             className="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-[0.9] tracking-[-0.04em] text-[var(--gray-12)]"
           >
-            Alex Chen
+            Naim Uddin Arafat
           </GravitationalText>
         </BlurFade>
 
         <BlurFade delay={0.1} inView>
           <p className="mt-6 text-[15px] leading-[1.6] text-[var(--gray-8)]">
-            Design engineer. Currently at Vercel.
+            Full-Stack JavaScript &amp; React Native Developer.
             <br />
-            Previously Linear, Stripe.
+            Shipping from Chittagong, Bangladesh.
           </p>
         </BlurFade>
 
         <BlurFade delay={0.2} inView>
           <p className="mt-8 text-[14px] text-[var(--gray-6)]">
-            If you care about this stuff too &mdash;
+            Have a project in mind? Let&apos;s build it together &mdash;
           </p>
         </BlurFade>
 
@@ -37,10 +37,10 @@ export function Closing() {
           <div className="mt-4">
             <Magnetic strength={0.15}>
               <a
-                href="mailto:alex@example.com"
+                href="mailto:arfatahsan60@gmail.com"
                 className="group inline-flex select-none items-center gap-2 rounded-full bg-[var(--gray-12)] px-6 py-3 text-[14px] font-medium text-[var(--gray-1)] transition-transform duration-[var(--duration-fast)] active:scale-[0.96]"
               >
-                alex@example.com
+                arfatahsan60@gmail.com
                 <span className="inline-block transition-transform duration-[var(--duration-normal)] group-hover:translate-x-0.5">
                   &rarr;
                 </span>
@@ -49,25 +49,32 @@ export function Closing() {
           </div>
         </BlurFade>
 
-        {/* Social links — text only, minimal */}
+        {/* Social links */}
         <BlurFade delay={0.4} inView>
           <div className="mt-12 flex gap-6">
-            {["Twitter", "GitHub", "LinkedIn"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                className="text-[12px] text-[var(--gray-6)] transition-colors duration-[var(--duration-fast)] hover:text-[var(--gray-10)]"
-              >
-                {s}
-              </a>
-            ))}
+            <a
+              href="https://github.com/ArfatChowdhury"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] text-[var(--gray-6)] transition-colors duration-[var(--duration-fast)] hover:text-[var(--gray-10)]"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] text-[var(--gray-6)] transition-colors duration-[var(--duration-fast)] hover:text-[var(--gray-10)]"
+            >
+              LinkedIn
+            </a>
           </div>
         </BlurFade>
 
-        {/* Copyright — barely there */}
+        {/* Copyright */}
         <BlurFade delay={0.45} inView>
           <p className="mt-16 text-[11px] text-[var(--gray-5)]">
-            &copy; {new Date().getFullYear()}
+            &copy; {new Date().getFullYear()} Naim Uddin Arafat
           </p>
         </BlurFade>
       </div>
