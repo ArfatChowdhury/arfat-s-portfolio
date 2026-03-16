@@ -150,19 +150,19 @@ export function LensScrollbar() {
             >
                 <button
                     onClick={() => scrollTo("contact")}
-                    className="group flex flex-row-reverse items-center justify-between gap-4 border border-r-0 border-orange-500/20 bg-black/80 px-4 py-8 backdrop-blur-xl transition-all duration-500 hover:border-orange-500 hover:shadow-[-10px_0_40px_rgba(249,115,22,0.2)] [writing-mode:vertical-rl]"
+                    className="group flex flex-row-reverse items-center justify-between gap-4 border-0 bg-orange-500 px-4 py-8 transition-all duration-500 hover:bg-orange-600 hover:shadow-[-10px_0_40px_rgba(249,115,22,0.4)] [writing-mode:vertical-rl]"
                 >
-                    <span className="text-[14px] text-orange-500 animate-bounce">↓</span>
+                    <span className="text-[14px] text-white animate-bounce">↓</span>
                     <span className="font-mono text-[11px] font-bold uppercase tracking-[6px] text-white">
                         Let&apos;s Talk
                     </span>
                     <motion.span
                         animate={{ opacity: [1, 0.4, 1], scale: [1, 1.2, 1] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
-                        className="h-2 w-2 rounded-full bg-orange-500 shadow-[0_0_10px_#f97316]"
+                        className="h-2 w-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.6)]"
                     />
                 </button>
-                <div className="flex w-full items-center justify-center border border-t-0 border-r-0 border-orange-500/10 bg-black/90 p-2 font-mono text-[10px] tabular-nums text-orange-500/60">
+                <div className="flex w-full items-center justify-center bg-orange-600 p-2 font-mono text-[10px] tabular-nums text-white/80">
                     {String(pct).padStart(3, "0")}%
                 </div>
             </motion.div>

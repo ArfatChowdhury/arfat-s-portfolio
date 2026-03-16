@@ -8,7 +8,7 @@ import { AvatarMosaic } from "@/components/ui/avatar-mosaic";
 const socials = [
   { name: "GitHub", url: "https://github.com/ArfatChowdhury" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/naim-uddin-arafat" },
-  { name: "Behance", url: "https://behance.net/arfatChowdhury" },
+  { name: "Behance", url: "https://www.behance.net/arfatChowdhury" },
 ];
 
 export function Contact() {
@@ -23,7 +23,7 @@ export function Contact() {
           <GravitationalText
             intensity={12}
             radius={160}
-            className="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-[0.9] tracking-[-0.04em] text-[var(--gray-12)]"
+            className="text-[clamp(1.75rem,8vw,5rem)] font-bold leading-[0.9] tracking-[-0.04em] text-[var(--gray-12)]"
           >
             Naim Uddin Arafat
           </GravitationalText>

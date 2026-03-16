@@ -38,7 +38,7 @@ export function Opening() {
         >
           <span className="inline-flex items-center gap-2 text-[13px] text-[var(--gray-8)]">
             <span className="inline-block h-[6px] w-[6px] rounded-full bg-emerald-500/80" />
-            Open to Remote Opportunities
+            Open to Remote &amp; On-site Roles
           </span>
         </motion.div>
 

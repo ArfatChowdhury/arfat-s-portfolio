@@ -41,7 +41,7 @@ function PreloaderOverlay() {
       </div>
 
       {/* Top stair columns — always dark, collapse upward on exit */}
-      <motion.div className="pointer-events-none fixed left-0 top-0 z-[2] flex h-[50vh]">
+      <motion.div className="pointer-events-none fixed left-0 top-0 z-[2] flex h-[50dvh]">
         {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}
@@ -60,7 +60,7 @@ function PreloaderOverlay() {
       </motion.div>
 
       {/* Bottom stair columns — always dark, collapse downward on exit */}
-      <motion.div className="pointer-events-none fixed bottom-0 left-0 z-[2] flex h-[50vh] items-end">
+      <motion.div className="pointer-events-none fixed bottom-0 left-0 z-[2] flex h-[50dvh] items-end">
         {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}

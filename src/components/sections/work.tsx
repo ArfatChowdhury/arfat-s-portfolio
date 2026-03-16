@@ -164,19 +164,19 @@ function ProjectModal({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="fixed inset-0 z-[200] flex items-center justify-center px-4 py-6"
+        className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center sm:px-4 sm:py-6"
         onClick={onClose}
       >
         {/* Backdrop */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
-        {/* Modal panel */}
+        {/* Modal panel — full screen on mobile, card on desktop */}
         <motion.div
-          initial={{ opacity: 0, y: 24, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 24, scale: 0.97 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 30 }}
           transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-          className="relative z-10 w-full max-w-[640px] max-h-[85vh] overflow-y-auto rounded-2xl bg-[var(--gray-2)] border border-[var(--gray-4)] shadow-2xl"
+          className="relative z-10 w-full sm:max-w-[640px] h-[92vh] sm:h-auto sm:max-h-[85vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl bg-[var(--gray-2)] border-t sm:border border-[var(--gray-4)] shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -190,7 +190,7 @@ function ProjectModal({
             </svg>
           </button>
 
-          <div className="p-7">
+          <div className="p-5 sm:p-7">
             {/* Header */}
             <div className="mb-6">
               <div className="mb-2 flex items-center gap-2 flex-wrap">

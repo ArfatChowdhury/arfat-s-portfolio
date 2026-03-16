@@ -25,7 +25,6 @@ export default function Home() {
                 <Skills />
                 {/* <Testimonials /> */}
                 <Contact />
-                <Closing />
             </main>
         </Preloader>
     );

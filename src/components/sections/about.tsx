@@ -5,8 +5,9 @@ import { BlurFade } from "@/components/ui/blur-fade";
 const details = [
   { label: "Focus", value: "React Native · MERN Stack" },
   { label: "Based in", value: "Chittagong, Bangladesh" },
-  { label: "Status", value: "Open to Remote Opportunities" },
+  { label: "Status", value: "Open to Remote & On-site Roles" },
   { label: "GitHub", value: "github.com/ArfatChowdhury" },
+  { label: "Behance", value: "behance.net/arfatChowdhury" },
 ];
 
 export function About() {
