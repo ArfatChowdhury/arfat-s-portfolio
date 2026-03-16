@@ -61,7 +61,7 @@ export function Experience() {
         ref={containerRef}
         className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden"
       >
-        <div className="mb-8 px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
+        <div className="mb-8 px-6 lg:pl-[max(1.5rem,calc((100%-960px)/2))]">
           <BlurFade delay={0} inView>
             <p className="text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
               Previously
@@ -72,7 +72,7 @@ export function Experience() {
         <motion.div
           ref={trackRef}
           style={{ x }}
-          className="flex gap-6 pl-6 pr-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]"
+          className="flex gap-6 pl-6 pr-6 lg:pl-[max(1.5rem,calc((100%-960px)/2))]"
         >
           {careers.map((c, i) => (
             <div
@@ -100,7 +100,7 @@ export function Experience() {
         </motion.div>
 
         {/* Scroll progress indicator */}
-        <div className="mt-8 px-6 lg:pl-[max(1.5rem,calc((100vw-960px)/2))]">
+        <div className="mt-8 px-6 lg:pl-[max(1.5rem,calc((100%-960px)/2))]">
           <div className="h-px w-[200px] overflow-hidden rounded-full bg-[var(--gray-3)]">
             <motion.div
               className="h-full rounded-full bg-[var(--gray-7)]"

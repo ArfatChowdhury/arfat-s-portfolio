@@ -15,7 +15,7 @@ import { LensScrollbar } from "@/components/ui/lens-scrollbar";
 export default function Home() {
     return (
         <Preloader>
-            <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            <main className="min-h-screen bg-background text-foreground">
                 <LensScrollbar />
                 <Navbar />
                 <Opening />
