@@ -386,7 +386,7 @@ export function Work() {
       </div>
 
       {/* ═══ Projects Grid ═══ */}
-      <div className="py-16 px-6">
+      <div className="py-16 px-6 pb-32">
         <div className="mx-auto max-w-[960px]">
           <BlurFade delay={0} inView>
             <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.15em] text-[var(--gray-7)]">
