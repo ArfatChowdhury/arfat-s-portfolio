@@ -13,7 +13,7 @@ const projects = [
     tag: "[MOB-001]",
     tagBadge: "AI-Powered · Play Store Soon",
     period: "Oct 2025 – Present",
-    title: "Expense Tracker – Panda Edition",
+    title: "Wallety - Ai budget Tracker",
     type: "React Native Mobile App",
     lede: "AI-powered personal finance manager. Snap a receipt — Groq Llama 4 Vision extracts everything instantly.",
     description:
@@ -30,7 +30,7 @@ const projects = [
     ],
     stackPreview: ["React Native", "Groq SDK", "Firebase"],
     stack: ["React Native", "Expo SDK 54", "NativeWind", "Groq SDK", "Firebase", "Context API", "AsyncStorage", "expo-notifications", "expo-print"],
-    github: "https://github.com/ArfatChowdhury/react-native-expense-tracker",
+    github: "https://github.com/ArfatChowdhury/wallety-ai",
     live: null,
   },
   {

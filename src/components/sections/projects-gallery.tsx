@@ -27,11 +27,11 @@ const projects = [
     tags: ["React Native", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    title: "Expense Tracker App",
+    title: "Wallety - Ai budget Tracker",
     description:
       "Cross-platform mobile app for tracking expenses with global state management and offline persistence using AsyncStorage.",
     role: "Mobile App Developer",
-    url: "github.com/ArfatChowdhury/react-native-expense-tracker",
+    url: "github.com/ArfatChowdhury/wallety-ai",
     year: "2025",
     tags: ["React Native", "Expo", "Context API", "React Navigation"],
   },
@@ -99,9 +99,9 @@ function ProjectCard({
             className={isOdd ? "md:order-1" : ""}
           >
             <Safari url={project.url} className="shadow-lg shadow-black/10">
-              {project.title === "Expense Tracker App" ? (
+              {project.title === "Wallety - Ai budget Tracker" ? (
                 <img
-                  src="/expenseTracker.png"
+                  src="/wallety-screenshot/1.png"
                   alt={project.title}
                   width={560}
                   height={340}
