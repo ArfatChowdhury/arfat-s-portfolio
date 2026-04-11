@@ -13,8 +13,9 @@ const projects = [
     tag: "[MOB-001]",
     tagBadge: "AI-Powered · Play Store Soon",
     period: "Oct 2025 – Present",
-    title: "Wallety - Ai budget Tracker",
+    title: "Wallety - AI Budget Tracker",
     type: "React Native Mobile App",
+    icon: "./wallety-screenshot/wallety.png",
     lede: "AI-powered personal finance manager. Snap a receipt — Groq Llama 4 Vision extracts everything instantly.",
     description:
       "A full-featured AI-powered personal finance manager with a sleek Panda (Black & White) theme. Snap a photo of any receipt — Groq Llama 4 Vision extracts the title, amount and category instantly. No manual entry needed.",
@@ -36,10 +37,11 @@ const projects = [
   {
     id: "MOB-002",
     tag: "[MOB-002]",
-    tagBadge: "Finance · Play Store Soon",
+    tagBadge: "Finance · Live on Play Store",
     period: "Jan 2026 – Present",
     title: "EMI Smart Loan Planner",
     type: "React Native Mobile App",
+    icon: "/Emi.png",
     lede: "Premium dark-themed financial app for calculating and managing loans with SVG charts and amortization schedules.",
     description:
       "A premium dark-themed financial app for calculating, analysing and managing loans. Real-time SVG donut chart visualisations, full amortization schedules and Google Ads monetization built in.",
@@ -57,7 +59,7 @@ const projects = [
     stackPreview: ["React Native", "Expo Router", "React Native SVG"],
     stack: ["React Native", "Expo SDK 54", "Expo Router", "Reanimated", "React Native SVG", "AsyncStorage", "expo-print", "Google Mobile Ads"],
     github: "https://github.com/ArfatChowdhury/EMI-Calculator---Smart-Loan-Planner",
-    live: null,
+    live: "https://play.google.com/store/apps/details?id=com.naim.emicalculator&pcampaignid=web_share",
   },
   {
     id: "WEB-001",
@@ -192,19 +194,28 @@ function ProjectModal({
 
           <div className="p-5 sm:p-7">
             {/* Header */}
-            <div className="mb-6">
-              <div className="mb-2 flex items-center gap-2 flex-wrap">
-                <span className="font-mono text-[11px] text-[var(--gray-6)]">{project.tag}</span>
-                <span className="rounded-full bg-[var(--gray-3)] px-2 py-0.5 text-[11px] text-[var(--gray-7)]">
-                  {project.tagBadge}
-                </span>
+            <div className="mb-6 flex gap-4 md:gap-5 items-start">
+              {project.icon && (
+                <img
+                  src={project.icon}
+                  alt={`${project.title} icon`}
+                  className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl object-cover shadow-sm bg-[var(--gray-3)]"
+                />
+              )}
+              <div>
+                <div className="mb-2 flex items-center gap-2 flex-wrap">
+                  <span className="font-mono text-[11px] text-[var(--gray-6)]">{project.tag}</span>
+                  <span className="rounded-full bg-[var(--gray-3)] px-2 py-0.5 text-[11px] text-[var(--gray-7)]">
+                    {project.tagBadge}
+                  </span>
+                </div>
+                <h2 className="text-[clamp(1.25rem,3vw,1.75rem)] font-bold tracking-[-0.02em] text-[var(--gray-12)]">
+                  {project.title}
+                </h2>
+                <p className="mt-1 text-[12px] text-[var(--gray-6)]">
+                  {project.type} · {project.period}
+                </p>
               </div>
-              <h2 className="text-[clamp(1.25rem,3vw,1.75rem)] font-bold tracking-[-0.02em] text-[var(--gray-12)]">
-                {project.title}
-              </h2>
-              <p className="mt-1 text-[12px] text-[var(--gray-6)]">
-                {project.type} · {project.period}
-              </p>
             </div>
 
             {/* Description */}
@@ -269,7 +280,7 @@ function ProjectModal({
                     <polyline points="15 3 21 3 21 9" />
                     <line x1="10" y1="14" x2="21" y2="3" />
                   </svg>
-                  Live Demo
+                  {project.live.includes("play.google.com") ? "Play Store" : "Live Demo"}
                 </a>
               )}
             </div>

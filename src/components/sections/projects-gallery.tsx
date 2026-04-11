@@ -35,6 +35,15 @@ const projects = [
     year: "2025",
     tags: ["React Native", "Expo", "Context API", "React Navigation"],
   },
+  {
+    title: "EMI Smart Loan Planner",
+    description:
+      "Premium dark-themed financial app for calculating, analysing and managing loans with SVG charts and amortization schedules.",
+    role: "Mobile App Developer",
+    url: "play.google.com/store/apps/details?id=com.naim.emicalculator",
+    year: "2026",
+    tags: ["React Native", "Expo", "React Native SVG", "Google Mobile Ads"],
+  },
 ];
 
 function ProjectCard({
@@ -107,6 +116,14 @@ function ProjectCard({
                   height={340}
                   className="rounded-none object-cover"
                 />
+              ) : project.title === "EMI Smart Loan Planner" ? (
+                <div className="flex h-[340px] w-full items-center justify-center bg-[var(--gray-2)]">
+                  <img
+                    src="/Emi.png"
+                    alt={project.title}
+                    className="w-32 h-32 md:w-48 md:h-48 object-contain rounded-2xl md:rounded-3xl shadow-xl"
+                  />
+                </div>
               ) : (
                 <PlaceholderImage
                   width={560}
