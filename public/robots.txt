@@ -1,5 +1,0 @@
-# Created by `npx aiblogwrite init`. Every page may be crawled, as with no robots.txt.
-User-agent: *
-Allow: /
-
-Sitemap: https://arfat-s-portfolio.vercel.app/sitemap.xml

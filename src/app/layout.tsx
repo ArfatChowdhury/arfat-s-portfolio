@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import "./globals.css";
+
+const GTM_ID = "GTM-PKQXXFMC";
+const GA_ID = "G-FRQFSKV2X6";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,12 +45,23 @@ export default function RootLayout({
           }}
         />
       </head>
+      <GoogleTagManager gtmId={GTM_ID} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans overflow-x-hidden`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <CursorGlow />
         {children}
       </body>
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }
