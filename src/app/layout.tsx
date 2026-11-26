@@ -4,7 +4,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import "./globals.css";
 
-const GTM_ID = "GTM-PKQXXFMC";
+const GTM_ID = "GTM-PW36LZJV";
 const GA_ID = "G-FRQFSKV2X6";
 
 const geistSans = Geist({
